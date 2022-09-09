@@ -1,6 +1,7 @@
 package com.qascript;
 
-import org.junit.Assert;
+import static org.testng.Assert.assertEquals;
+
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +20,7 @@ public class FirstTest {
 		driver = new ChromeDriver(options);
         driver.get("https://www.google.com");
         System.out.println("Title of the page is: " + driver.getTitle());
+        assertEquals(1, 1);
     }
 }
 

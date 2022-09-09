@@ -11,7 +11,7 @@ public class FirstTest {
 
     @Test
     public void OpenBrowser()  {
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver ;
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");

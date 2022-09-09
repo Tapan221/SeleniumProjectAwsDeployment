@@ -23,6 +23,7 @@ public class FirstTest {
 		 // Bypass OS security model
 		options.addArguments("--remote-debugging-port=9222");
 		options.addArguments("--window-size=1920x1080");
+		driver = new ChromeDriver(options);
         driver.get("https://www.google.com");
         System.out.println("Title of the page is: " + driver.getTitle());
     }

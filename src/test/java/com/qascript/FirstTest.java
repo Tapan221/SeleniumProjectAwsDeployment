@@ -25,7 +25,6 @@ public class FirstTest {
 		options.addArguments("--window-size=1920x1080");
         driver.get("https://www.google.com");
         System.out.println("Title of the page is: " + driver.getTitle());
-        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
     }
 }
 

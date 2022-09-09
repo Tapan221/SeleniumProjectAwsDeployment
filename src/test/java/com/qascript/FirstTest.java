@@ -1,7 +1,5 @@
 package com.qascript;
 
-import static org.testng.Assert.assertEquals;
-
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,26 +12,17 @@ public class FirstTest {
     public void OpenBrowser()  {
         WebDriver driver ;
         
-        //System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver_win32\\chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-		options.addArguments("--disable-gpu"); 
-		options.addArguments("--no-sandbox") ;
-		options.addArguments("--disable-setuid-sandbox") ;
-
-		options.addArguments("--remote-debugging-port=9222");
-
-		options.addArguments("--disable-dev-shm-using") ;
-		options.addArguments("--disable-extensions"); 
-		options.addArguments("--disable-gpu") ;
-		options.addArguments("start-maximized") ;
-		options.addArguments("disable-infobars");
+        options.addArguments("headless");
+		options.addArguments("disable-gpu");
 		driver = new ChromeDriver(options);
         driver.get("https://www.google.com");
         System.out.println("Title of the page is: " + driver.getTitle());
-        assertEquals(1, 1);
-    }
+       
+}
+    
 }
 
 
